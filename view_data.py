@@ -1,3 +1,6 @@
+''' Use this script to view the orientation of the measured and smoothed data 
+    files with respect to the crystal axes.  
+'''
 
 import glob
 import pandas
@@ -12,9 +15,9 @@ cwd = os.getcwd()
 measured_lo_path = cwd + '/measured_data/light_output/'
 measured_psp_path = cwd + '/measured_data/pulse_shape_parameter/'
 smoothed_lo_path = cwd + '/smoothed_data/light_output/'
-smoothe_psp_path = cwd + '/smoothed_data/pulse_shape_parameter/' 
+smoothed_psp_path = cwd + '/smoothed_data/pulse_shape_parameter/' 
 
-files = glob.glob(smoothed_lo_path + '*')
+files = glob.glob(smoothed_psp_path + '*')
 
 for fi in files:
     with open(fi, 'r') as f:

@@ -6,3 +6,6 @@ The measured and smoothed data are listed in ascii files.  Each file contains th
 
 ### Contents
 Each text file is composed of 4 columns.  Column 1 is the light ouptput (MeVee) or pulse shape parameter (unitless).  Columns 2 - 4 are the x, y, and z coordinates, respectively.
+
+## Viewing data
+view_data.py is provided to view the data relative and plot it w.r.t. the crystal axes.
