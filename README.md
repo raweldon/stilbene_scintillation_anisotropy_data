@@ -5,7 +5,7 @@ Measured and smoothed light output and pulse shape parameter anisotropy for reco
 The measured and smoothed data are listed in ascii files.  Each file contains the light output or pulse shape parameter values for a given recoil proton energy along with the direction of the given parameter with respect to the crystal axes.
 
 ### Contents
-Each text file is composed of 4 or 5 columns.  Column 1 is the light ouptput (MeVee) or pulse shape parameter (unitless).  Columns 2 - 4 are the x, y, and z coordinates, respectively.  The measured data has a 5th column with the crystal used for a given measurement listed.
+Each text file is composed of 4 or 5 columns.  Column 1 is the light ouptput (MeVee) or pulse shape parameter (unitless).  Columns 2 - 4 are the x, y, and z coordinates, respectively.  The measured data has a 5th column that lists the crystal used for a given measurement listed.
 
 ## Viewing data
 view_data.py is provided to plot the data w.r.t. the crystal axes. 
