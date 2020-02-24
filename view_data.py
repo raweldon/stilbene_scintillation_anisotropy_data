@@ -1,4 +1,5 @@
 ''' Plots the measured and smoothed light output and pulse shape parameter data
+    Selection of plots and plotted data can be made in the main block
 '''
 
 import glob
@@ -115,15 +116,22 @@ def lambert_projection_plots(files):
         plt.yticks([])
         plt.tight_layout()
 
-def main(plot_3d, plot_lambert_projection):
-    # data file directories
+
+if __name__ == '__main__':
+
+    # select plots to show
+    plot_3d = True
+    plot_lambert_projection = True
+
+    # select data file directory
     cwd = os.getcwd()
     measured_lo_path = cwd + '/measured_data/light_output/'
     measured_psp_path = cwd + '/measured_data/pulse_shape_parameter/'
     smoothed_lo_path = cwd + '/smoothed_data/light_output/'
     smoothed_psp_path = cwd + '/smoothed_data/pulse_shape_parameter/' 
     files = glob.glob(smoothed_lo_path + '*')
-    
+
+    # plot
     if plot_3d:
         print('\nPlotting with mplot3d')
         plot_3D(files)
@@ -132,12 +140,7 @@ def main(plot_3d, plot_lambert_projection):
     if plot_lambert_projection:
         print('\nPlotting Lambert azimuthal equal area projection')
         lambert_projection_plots(files)
-        plt.show()    
-
-if __name__ == '__main__':
-    plot_3d = True
-    plot_lambert_projection = True
-    main(plot_3d, plot_lambert_projection)
+        plt.show()  
 
  
 
