@@ -86,9 +86,9 @@ def lambert_projection_plots(files):
         plt.figure()
         plt.rcParams['axes.facecolor'] = 'grey'
         plt.imshow(interp.T, extent=(-1,1,-1,1), origin='lower', cmap='viridis', interpolation='none')
-        #plt.scatter(X, Y, c=df.param.values, cmap='viridis')
-        ## put avg uncert on colorbar
-        avg_uncert = df.param_unc.mean()/(df.param.max() - df.param.min()) # scale y from (0, 1) to (min(ql), max(ql))
+
+        # show trajectories
+        #plt.scatter(X, Y, c=df.param.values, cmap='viridis', edgecolors='k')
 
         if 'psp_' in f:
             cbar = plt.colorbar(format='%1.3f')
@@ -120,7 +120,7 @@ def lambert_projection_plots(files):
 if __name__ == '__main__':
 
     # select plots to show
-    plot_3d = True
+    plot_3d = False
     plot_lambert_projection = True
 
     # select data file directory
