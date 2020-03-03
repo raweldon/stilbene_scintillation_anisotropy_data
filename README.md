@@ -18,6 +18,7 @@ It contains a function to plot the data in 3D and a function to plot the data us
 
 ### Requirments
 view_data.py was tested on Python 3.7
+
 Required packages:
 - glob
 - pandas
